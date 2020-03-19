@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700&display=swap');
+/*Fonts*/
+/*Colors*/
+/*basic setting*/
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+/*Typography*/
+section {
+  padding: 18rem 0;
+}
+.main {
+  padding: 3rem 0;
+  background-color: #eff0f1;
+  /*Title*/
+  /*Button*/
+}
+.main .logo h1 {
+  line-height: 5rem;
+  text-align: center;
+  border: 1rem solid #a4f4ea;
+}
+.main .main-inf {
+  padding-top: 20rem;
+}
+.main .main-inf h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  color: #505050;
+  text-transform: uppercase;
+}
+.main .main-inf h1 span {
+  display: inline-block;
+  background-color: #a4f4ea;
+}
+.main .wrap-block {
+  padding-top: 15rem;
+  text-align: center;
+}
+.main .wrap-block .main-button {
+  padding: 0.5rem;
+  width: 60%;
+  text-align: center;
+  background-color: #eff0f1;
+  border: 0.2rem solid #505050;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #505050;
+}
+.main .wrap-block .main-button:hover {
+  border: none;
+  background-color: #a4f4ea;
+  -webkit-transition: 02s;
+  transition: 02s;
+}
+.main .wrap-block .main-button::focus {
+  outline: none;
+}
+.main .main-photo {
+  padding-top: 20rem;
+}
+@media (max-width: 767px) {
+  .main .main-menu {
+    margin-top: 0.5rem;
+    float: right;
+  }
+}
+.block {
+  margin-top: 2rem;
+  padding: 9rem 0;
+}
+.section-header {
+  line-height: 4rem;
+  font-weight: 900;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.section-span {
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #505050;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 9rem;
+}
+.about-us {
+  background-color: #f8fafa;
+}
+.about-us .about-us-block .about-us-img {
+  text-align: center;
+}
+.about-us .about-us-block .about-us-img picture {
+  position: relative;
+  z-index: 2;
+}
+.about-us .about-us-block .about-us-img .frame {
+  position: relative;
+  margin-top: -46rem;
+  margin-bottom: 6rem;
+  height: 40rem;
+  background-color: #eff0f1;
+  z-index: 1;
+}
+.about-us .about-us-text .about-us-header {
+  font-weight: 500;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+}
+.about-us .about-us-text span {
+  font-size: 2rem;
+}
+.works .features-slider .features-block {
+  outline: none;
+}
+.works .features-slider .features-block img {
+  margin: auto;
+  outline: none;
+}
+.service {
+  background-color: #eff0f1;
+}
+.service .serv {
+  margin-bottom: 2rem;
+  background-color: black;
+  width: 100%;
+}
+.service .serv img {
+  opacity: 0.3;
+  position: relative;
+  width: 100%;
+  height: 35rem;
+}
+.service .serv .description {
+  position: absolute;
+  top: 15rem;
+  left: 3rem;
+  right: 2rem;
+  width: 80%;
+  color: white;
+}
+.service .serv .description span {
+  font-size: 1.5rem;
+}
+.service .serv .description h4 {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.service .serv .description h4 a {
+  color: white;
+}

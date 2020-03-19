@@ -1,0 +1,191 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700&display=swap');
+.Mont(){
+	font-family: 'Montserrat', sans-serif;
+}
+.Merr(){
+	font-family: 'Merriweather', serif;
+}
+
+
+/*Colors*/
+@bg-block:#eff0f1;
+@title:#505050;
+@text-color:#d1d2d3;
+@active-col: #a4f4ea;
+@no-active:#525252;
+@foot-color:#2c2f32;
+ /*basic setting*/
+ html {
+ 	font-size: 10px;
+ }
+ body{
+ 	.Mont();
+ }
+ /*Typography*/
+ section{
+ 	padding: 18rem 0;
+ }
+.main{
+	padding:3rem 0;
+	background-color: @bg-block;
+	.logo{
+		h1{
+			line-height: 5rem;
+		    text-align: center;
+		    border:1rem solid #a4f4ea;
+		}
+	}
+/*Title*/	
+	.main-inf{
+		padding-top:20rem;
+		h1{
+			font-size: 4.5rem;
+			text-align: center;	
+			color: @title;
+			text-transform: uppercase;
+			span{
+				display: inline-block;
+				background-color: @active-col;
+			}
+		}
+	}
+/*Button*/
+	.wrap-block{
+		padding-top:15rem;
+		text-align: center;
+			.main-button{
+				padding:0.5rem;
+				width: 60%;
+				text-align: center;
+				background-color:@bg-block;
+				border:0.2rem solid @title;
+				font-size: 2rem;
+				text-transform: uppercase;
+				font-weight: 200;
+				color:@title;
+				&:hover{
+					border:none;
+					background-color: @active-col;
+					transition: 02s;	
+				}
+				&::focus{
+					outline: none;
+				}
+			}
+
+	}
+	.main-photo {
+		padding-top:20rem;
+	}
+	@media(max-width: 767px ) {
+		.main-menu{
+			margin-top: 0.5rem;
+			float:right;
+		}
+	}
+}
+.block{
+	margin-top: 2rem;
+	padding:9rem 0;
+}
+.section-header {
+		line-height: 4rem;
+		font-weight: 900;
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;	
+	}
+	.section-span{
+		line-height: 4rem;
+		text-align: center;
+		font-size: 2rem;
+		color: @title;
+		.Merr();
+		margin-bottom: 9rem;
+		
+	}
+.about-us {
+	background-color: #f8fafa;
+
+	.about-us-block{
+		.about-us-img{
+			text-align: center;
+			picture{
+				position: relative;
+				z-index: 2;
+			}
+			.frame{
+				position: relative;
+				margin-top: -46rem;
+				margin-bottom: 6rem;
+				height: 40rem;
+				background-color:@bg-block;
+				z-index: 1;
+			}
+		}
+	}
+	.about-us-text{
+		.about-us-header{
+			font-weight: 500;
+			line-height: 4rem;
+			line-height: 4rem;
+			text-align: center;
+			font-size: 2.5rem;
+			.Merr();
+		}
+		span {
+			font-size: 2rem;
+		}
+	}
+}
+.works{
+	.features-slider{
+		.features-block{
+			outline: none;
+			img {
+				margin: auto;
+				outline: none;
+				
+
+			}
+		}
+	}
+}
+.service{
+	background-color: @bg-block;
+	.serv{
+		margin-bottom: 2rem;
+		background-color: black;
+		width: 100%;
+		
+		img{
+			opacity: 0.3;
+			position: relative;
+			width: 100%;
+			height:35rem;
+		}
+		.description{
+			position: absolute;
+			top: 15rem;
+			left: 3rem;
+			right: 2rem;
+			width: 80%;
+			color: white;
+			span{
+				font-size: 1.5rem;
+
+			}
+			h4{
+				margin-top: 2rem;
+				margin-left: 1rem;
+				a{
+					color:white;
+				}
+			}
+		}
+	}
+}
+	
+
+
