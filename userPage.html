@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <title>Desilearn</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>	
+		<div class="container">
+
+  				<div class="row">
+  					<div class="col-lg-3 col-md-3 col-sm-4 ">
+  						<div class="logo">
+  							<h1>Desilearn</h1>
+  						</div>	
+  					</div>
+
+  					<div class="col-lg-5 offset-lg-4 col-md-2 offset-md-7 col-sm-2 offset-sm-6">
+  						<div class="main-menu">
+  							<a href="">Курси</a>
+  							<a href="">Допомога</a>
+  							<img src="img/user.png" alt="User">
+  						</div>
+  					</div>
+
+  				</div>
+  		</div>
+	</header>
+	<div class="user-info">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 photo-user">
+					<div class="back-block"></div>
+  					<div class="user-block">
+  						<picture>
+  							<img src="img/teacher1.png" alt="">
+  						</picture>
+  					</div>
+  					<h2 id="userName">Alph Lorem</h2>
+  				</div>
+
+  				<div class="col-lg-7 col-md-12">
+  					<div class="user-date">
+  						<label for="#">Логін</label>
+						<input class="user-data-input" type="text"   value="Аня12" readonly>
+						<label for="#">Телефон</label>
+						<input class="user-data-input" type="text"  value="0675343456" readonly>
+						<label for="#">Пошта</label>
+						<input class="user-data-input" type="email" value="Аnn12@gmail.com" readonly>
+						<label for="#">Пароль</label>
+						<input class="user-data-input" type="pasword" value="********">	
+  					</div>
+  					<div class="user-history">
+  						<h1>Історія бронювань</h1>
+  						<div class="tabs">
+  							<div class="tab-btn">
+  								<button type="submit" name="school">Школа</button>	
+  								<button type="submit" name="user">Користувачі</button>
+  								<button type="submit" name="history">Історія</button>
+  								<button type="submit" name="course">Курси</button>
+  								<button type="submit" name="teacher">Вчителі</button>
+  								<button type="submit" name="admin">Адміністратори</button>
+  							</div>
+  							<div class="tab-content">
+  								<div id="school-content">text 1 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  								<div id="user-content">text 2 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  								<div id="history-content">text 3 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  								<div id="course-content">text 4 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  								<div id="teacher-content">text 5 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  								<div id="admin-content">text 6 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		"use strick"
+		$(".tab-btn").on("click", "button", function(el){
+			let name = el.target.name;
+
+			$(".tab-content>div").css({display: "none"});
+
+			switch(name){
+				case "school": $("#school-content").css({display: "block"}); break;
+				case "user": $("#user-content").css({display: "block"}); break;
+				case "history": $("#history-content").css({display: "block"}); break;
+				case "course": $("#course-content").css({display: "block"}); break;
+				case "teacher": $("#teacher-content").css({display: "block"}); break;
+				case "admin": $("#admin-content").css({display: "block"}); break;
+			}
+
+		})
+	</script>
+</body>
+</html>

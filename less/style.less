@@ -447,7 +447,237 @@ footer{
 	}
 }
 	
+//////////////////////////////////////user page/////////////////////////////////////////////////////////////////////////
+header{
+	padding:1rem 0;
+	background-color: @bg-block;
+	.logo{
+		h1{
+			line-height: 4rem;
+		    text-align: center;
+		    border:1rem solid #a4f4ea;
+		}
+	}
+	.main-menu{
+		float: right;
+		a{
 
+			font-size: 2rem;
+			margin-right: 2rem;
+			padding:1rem;
+			text-align: center;
+			color:black;
+		}
+	}
+}
+.user-info{
+	background-color: #f8fafa;
+	.photo-user{
+		margin-top:5rem;
+		.user-block{
+			text-align: center;
+			z-index: 5;
+			img{
+				position: relative;
+				z-index: 2;
+			}
+		}
+		.back-block{
+			position: absolute;
+			height: 40rem;
+			width: 42rem;
+			background-color:@bg-block;
+			top:2rem;
+			left: 50%;
+			transform: translate(-50%);
+			z-index: 1;
+		}
+		#userName{
+			margin: 1rem;
+			text-align: center;
+			font-style: italic;
+			font-size: 3rem;
+		}
+	}
+	.user-date{
+		margin-top:7rem;
+		background-color:@bg-block;
+		padding:3rem;
+		padding-bottom:4rem;
+		padding-top:2rem;
+
+		label{
+			position:relative;
+			font-size: 1.2rem;
+			top:3rem;
+			color: #9ca5ab;
+		}
+		.user-data-input{
+			width: 80%;
+			margin-bottom: 1rem;
+			margin-left: 8rem;
+			font-size: 2rem;
+			text-decoration: italic;
+			display: block;
+			color: #9ca5ab;
+			border:none;
+			border-bottom: 1px solid #9ca5ab;
+			outline: none;
+			background-color:@bg-block;
+
+		}
+
+	}
+	.user-history{
+		height: 20rem;
+		margin-top: 3rem;
+		background-color:@bg-block;
+		margin-bottom:5rem;
+		h1{
+			text-align: center;
+		}
+		.tabs{
+			padding:1rem;
+			.tab-btn{
+
+				display:inline-block;
+
+				button{
+					width: 10rem;
+					height: 4rem;
+				}
+			}
+			.tab-content{
+				margin-top: 1rem;
+				background-color: white;
+				div{
+					display:none;
+				}
+			}
+		}
+	}
+
+
+}
+.user-footer{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	.foot-title{
+		padding-top:2rem;
+		text-align: center;
+		color: white;
+		font-size: 2rem;
+	}
+}
+
+///////////////////////////////////courses page/////////////////////////////////
+.course-info{
+	padding:2rem;
+	.type{
+		margin-bottom: 0;
+	}
+	.data{
+		margin-bottom: 2rem;
+	}
+	.img-block{
+		transition-duration: 5s;
+		height: 100%;
+		background:url(../img/UXpro.png) no-repeat 0% 0%;
+		background-size: cover;
+		padding-top:5rem;
+		.description{
+			display: none;
+			h1{
+				.Merr();
+				text-align: center;
+				font-size: 3rem;
+				margin: 1rem;
+			}
+			p{
+				.Merr();
+				font-style:italic;
+				font-size: 1.5rem;
+			}
+		}
+		&:hover{
+			background:none;
+			transition-duration: 2s;
+			.description{
+				display: block;
+				transition-duration: 2s;
+
+			}
+		}
+	}
 	
 
+	.wrap-vac{
+		padding:4rem;
+		.vacancines{
+			border:2px solid @no-active;
+			border-radius: 1rem;
+			padding:1.5rem;
+			text-align: center;
+			h2{
+				.Merr();
+				text-align: center;
+				font-size: 2.5rem;
 
+			}
+			.vavancines-num{
+				.Merr();
+				display: block;
+				text-align: center;
+				font-size: 7rem;
+				margin: 1rem;
+			}
+			button{
+
+				background-color: @bg-block;
+				font-size: 1.5rem;
+				padding:1rem;
+			}
+		}
+	}
+	.containe{
+		border:2px solid @no-active;
+		border-radius: 1rem;
+		padding:1.5rem;
+		text-align: center;
+		min-height: 18rem;
+		h1{
+			.Merr();
+			text-align: center;
+			font-size: 2.5rem;
+		}
+		span{
+			.Merr();
+			display: block;
+			text-align: center;
+			font-size: 5rem;
+			margin: 1rem;
+		}
+		#titleSchool{
+			font-size: 2.5rem;
+		}
+		#teacherName{
+			font-size: 2rem;
+		}
+		.photo-cont{
+			width:5rem;
+			height: auto;
+			margin:auto;
+			
+			
+			img{
+
+				width: 100%;
+				height: auto;
+				border-radius: 10rem;
+
+			}
+		}
+	}
+
+}
