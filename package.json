@@ -1,0 +1,32 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "API",
+  "main": ".",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consolidate": "^0.15.1",
+    "dustjs-helpers": "^1.7.4",
+    "dustjs-linkedin": "^2.7.5",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^8.1.0",
+    "pg-promise": "^10.5.5",
+    "sequelize": "^5.21.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ihossa/Desilern.github.io.git"
+  },
+  "author": "ihor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ihossa/Desilern.github.io/issues"
+  },
+  "homepage": "https://github.com/Ihossa/Desilern.github.io#readme"
+}

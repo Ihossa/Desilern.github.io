@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700&display=swap');
+/*Fonts*/
+/*Colors*/
+/*basic setting*/
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+/*Typography*/
+section {
+  padding: 18rem 0;
+}
+.main {
+  padding: 3rem 0;
+  background-color: #eff0f1;
+  /*Title*/
+  /*Button*/
+}
+.main .logo h1 {
+  line-height: 5rem;
+  text-align: center;
+  border: 1rem solid #a4f4ea;
+}
+.main .main-inf {
+  padding-top: 20rem;
+}
+.main .main-inf h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  color: #505050;
+  text-transform: uppercase;
+}
+.main .main-inf h1 span {
+  display: inline-block;
+  background-color: #a4f4ea;
+}
+.main .wrap-block {
+  padding-top: 15rem;
+  text-align: center;
+}
+.main .wrap-block .main-button {
+  padding: 0.5rem;
+  width: 60%;
+  text-align: center;
+  background-color: #eff0f1;
+  border: 0.2rem solid #505050;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #505050;
+}
+.main .wrap-block .main-button:hover {
+  border: none;
+  background-color: #a4f4ea;
+  -webkit-transition: 02s;
+  transition: 02s;
+}
+.main .wrap-block .main-button::focus {
+  outline: none;
+}
+.main .main-photo {
+  padding-top: 20rem;
+}
+@media (max-width: 767px) {
+  .main .main-menu {
+    margin-top: 0.5rem;
+    float: right;
+  }
+}
+.block {
+  margin-top: 2rem;
+  padding: 9rem 0;
+}
+.section-header {
+  line-height: 4rem;
+  font-weight: 900;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.section-span {
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #505050;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 9rem;
+}
+.about-us {
+  background-color: #f8fafa;
+}
+.about-us .about-us-block .about-us-img {
+  text-align: center;
+}
+.about-us .about-us-block .about-us-img picture {
+  position: relative;
+  z-index: 2;
+}
+.about-us .about-us-block .about-us-img .frame {
+  position: relative;
+  margin-top: -46rem;
+  margin-bottom: 6rem;
+  height: 40rem;
+  background-color: #eff0f1;
+  z-index: 1;
+}
+.about-us .about-us-text .about-us-header {
+  font-weight: 500;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+}
+.about-us .about-us-text span {
+  font-size: 2rem;
+}
+.works .features-slider .features-block {
+  outline: none;
+}
+.works .features-slider .features-block img {
+  margin: auto;
+  outline: none;
+}
+.service {
+  background-color: #f8fafa;
+}
+.service .serv {
+  margin-bottom: 2rem;
+  background-color: black;
+  width: 100%;
+}
+.service .serv img {
+  opacity: 0.3;
+  position: relative;
+  width: 100%;
+  height: 35rem;
+}
+.service .serv .description {
+  position: absolute;
+  top: 15rem;
+  left: 3rem;
+  right: 2rem;
+  width: 80%;
+  color: white;
+}
+.service .serv .description span {
+  font-size: 1.5rem;
+}
+.service .serv .description h4 {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.service .serv .description h4 a {
+  color: white;
+}
+.team .row #teacher1 {
+  background: url(../img/teacher1.png) no-repeat;
+  background-size: cover;
+}
+.team .row #teacher2 {
+  background: url(../img/teacher2.png) no-repeat;
+  background-size: cover;
+}
+.team .row #teacher3 {
+  background: url(../img/teacher3.png) no-repeat;
+  background-size: cover;
+}
+.team .row #teacher4 {
+  background: url(../img/teacher4.png) no-repeat;
+  background-size: cover;
+}
+.team .row #teacher5 {
+  background: url(../img/teacher5.png) no-repeat;
+  background-size: cover;
+}
+.team .row #teacher6 {
+  background: url(../img/teacher6.png) no-repeat;
+  background-size: cover;
+}
+.team .row .teacher {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 42rem;
+  text-align: center;
+}
+.team .row .teacher .teacher-info {
+  background-color: #a4f4ea;
+  margin-top: 23rem;
+  padding: 1rem;
+}
+.team .row .teacher .teacher-info .teacher-soc {
+  padding: 1rem;
+}
+.team .row .teacher .teacher-info .teacher-soc .soc-link {
+  margin-right: 0.5rem;
+}
+.team .row .teacher .teacher-info:hover {
+  display: block;
+}
+@media (max-width: 767px) {
+  .team .row .teacher {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.info-learn {
+  background-color: #f8fafa;
+}
+.info-learn .photo-teach .teacher-slider {
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 37rem;
+}
+.info-learn .photo-teach .teacher-slider .tacher-block img {
+  margin: auto;
+  outline: none;
+}
+.info-learn .photo-teach .back-block {
+  position: absolute;
+  height: 40rem;
+  width: 42rem;
+  background-color: #eff0f1;
+  top: 2rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.info-learn .inf-teach .teacher-inf-slider {
+  margin-top: 2rem;
+  background-color: #eff0f1;
+  padding: 5rem;
+}
+.info-learn .inf-teach .teacher-inf-slider .teacher-inf-block h1 {
+  text-align: center;
+}
+.info-learn .inf-teach .teacher-inf-slider .teacher-inf-block span {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.call-back .feed-back {
+  padding: 2rem;
+  background-color: #495862;
+  margin-bottom: 1rem;
+}
+.call-back .feed-back label {
+  position: relative;
+  font-size: 1.2rem;
+  top: 1rem;
+  color: #9ca5ab;
+}
+.call-back .feed-back .feed-back-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  -webkit-text-decoration: italic;
+          text-decoration: italic;
+  display: block;
+  color: #9ca5ab;
+  border: none;
+  border-bottom: 1px solid #9ca5ab;
+  outline: none;
+  background-color: #495862;
+}
+.call-back .feed-back .feed-back-btn {
+  width: 45%;
+  padding: 2rem;
+  margin-top: 1rem;
+  color: #495862;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  background-color: #a4f4ea;
+}
+.call-back .contacts {
+  padding: 2rem;
+  background-color: #495862;
+  height: 43.5rem;
+}
+.call-back .contacts .phones {
+  margin-bottom: 1rem;
+}
+.call-back .contacts .phones span {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #9ca5ab;
+}
+.call-back .contacts .sites {
+  margin-bottom: 2rem;
+}
+.call-back .contacts .sites span {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #9ca5ab;
+}
+.call-back .contacts .location iframe {
+  width: 100%;
+  height: 25rem;
+}
+footer {
+  background-color: #2c2f32;
+  padding: 1rem;
+}
+footer .section-header {
+  color: white;
+  margin-top: 3rem;
+}
+footer .follow {
+  text-align: center;
+  margin: 2rem;
+}
+footer .follow img {
+  background-color: #424648;
+  margin: 0.5rem;
+  padding: 3px;
+}
+footer .follow img:hover {
+  background-color: #a4f4ea;
+}
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup .popup-content {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 10%;
+  min-width: 30rem;
+  background-color: #495862;
+  padding: 3rem;
+}
+.popup .popup-content .popup-close {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  text-align: center;
+  font-size: 4rem;
+  color: #a4f4ea;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.popup .popup-content .popup-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #9ca5ab;
+}
+.popup .popup-content .input-forms form {
+  display: inline;
+}
+.popup .popup-content .input-forms label {
+  position: relative;
+  font-size: 1.2rem;
+  top: 1rem;
+  color: #9ca5ab;
+}
+.popup .popup-content .input-forms .input-form {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  -webkit-text-decoration: italic;
+          text-decoration: italic;
+  display: block;
+  color: #9ca5ab;
+  border: none;
+  border-bottom: 1px solid #9ca5ab;
+  outline: none;
+  background-color: #495862;
+}
+.popup .popup-content .input-forms .btn {
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  color: #495862;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  background-color: #a4f4ea;
+}
+.popup .popup-content .input-forms .enter-btn,
+.popup .popup-content .input-forms .to-regist {
+  margin-left: 1.5rem;
+}
+#enter {
+  display: none;
+}
+#enter .popup-content {
+  top: 15%;
+}
+#registration {
+  display: none;
+}
+#registration .popup-content {
+  top: 15%;
+}
+header {
+  padding: 1rem 0;
+  background-color: #eff0f1;
+}
+header .logo a {
+  text-decoration: none;
+  color: black;
+}
+header .logo a h1 {
+  line-height: 4rem;
+  text-align: center;
+  border: 1rem solid #a4f4ea;
+}
+header .main-menu {
+  float: right;
+}
+header .main-menu a {
+  font-size: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: black;
+}
+.user-info {
+  background-color: #f8fafa;
+}
+.user-info .photo-user {
+  margin-top: 5rem;
+}
+.user-info .photo-user .user-block {
+  text-align: center;
+  z-index: 5;
+}
+.user-info .photo-user .user-block img {
+  position: relative;
+  z-index: 2;
+}
+.user-info .photo-user .back-block {
+  position: absolute;
+  height: 40rem;
+  width: 42rem;
+  background-color: #eff0f1;
+  top: 2rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 1;
+}
+.user-info .photo-user #userName {
+  margin: 1rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 3rem;
+}
+.user-info .user-date {
+  margin-top: 7rem;
+  background-color: #eff0f1;
+  padding: 3rem;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+.user-info .user-date label {
+  position: relative;
+  font-size: 1.2rem;
+  top: 3rem;
+  color: #9ca5ab;
+}
+.user-info .user-date .user-data-input {
+  width: 80%;
+  margin-bottom: 1rem;
+  margin-left: 8rem;
+  font-size: 2rem;
+  -webkit-text-decoration: italic;
+          text-decoration: italic;
+  display: block;
+  color: #9ca5ab;
+  border: none;
+  border-bottom: 1px solid #9ca5ab;
+  outline: none;
+  background-color: #eff0f1;
+}
+.user-info .user-history {
+  height: 20rem;
+  margin-top: 3rem;
+  background-color: #eff0f1;
+  margin-bottom: 5rem;
+}
+.user-info .user-history h1 {
+  text-align: center;
+}
+.user-info .user-history .tabs {
+  padding: 1rem;
+}
+.user-info .user-history .tabs .tab-btn {
+  display: inline-block;
+}
+.user-info .user-history .tabs .tab-btn button {
+  width: 10rem;
+  height: 4rem;
+}
+.user-info .user-history .tabs .tab-content {
+  margin-top: 1rem;
+  background-color: white;
+}
+.user-info .user-history .tabs .tab-content div {
+  display: none;
+}
+.user-footer {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.user-footer .foot-title {
+  padding-top: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.course-info {
+  padding: 2rem;
+}
+.course-info .type {
+  margin-bottom: 0;
+}
+.course-info .data {
+  margin-bottom: 2rem;
+}
+.course-info .img-block {
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+  height: 100%;
+  background: url(../img/UXpro.png) no-repeat 0% 0%;
+  background-size: cover;
+  padding-top: 5rem;
+}
+.course-info .img-block .description {
+  display: none;
+}
+.course-info .img-block .description h1 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem;
+}
+.course-info .img-block .description p {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.course-info .img-block:hover {
+  background: none;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+.course-info .img-block:hover .description {
+  display: block;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+.course-info .wrap-vac {
+  padding: 4rem;
+}
+.course-info .wrap-vac .vacancines {
+  border: 2px solid #525252;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.course-info .wrap-vac .vacancines h2 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.course-info .wrap-vac .vacancines .vavancines-num {
+  font-family: 'Merriweather', serif;
+  display: block;
+  text-align: center;
+  font-size: 7rem;
+  margin: 1rem;
+}
+.course-info .wrap-vac .vacancines button {
+  background-color: #eff0f1;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.course-info .containe {
+  border: 2px solid #525252;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  min-height: 18rem;
+}
+.course-info .containe h1 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.course-info .containe span {
+  font-family: 'Merriweather', serif;
+  display: block;
+  text-align: center;
+  font-size: 5rem;
+  margin: 1rem;
+}
+.course-info .containe #titleSchool {
+  font-size: 2.5rem;
+}
+.course-info .containe #teacherName {
+  font-size: 2rem;
+}
+.course-info .containe .photo-cont {
+  width: 5rem;
+  height: auto;
+  margin: auto;
+}
+.course-info .containe .photo-cont img {
+  width: 100%;
+  height: auto;
+  border-radius: 10rem;
+}

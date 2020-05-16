@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <title>Desilearn</title>
+    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+  	<main class="main" style="height: 71.8rem">
+  		<div class="container">
+  			<div class="header">
+  				<div class="row">
+  				</div>
+  			</div>
+  			<div class="main-inf">
+  				<h1>Вітаємо вас в школі <span>Desilearn</span><br><span>Школі</span> в якiй ви станете дизайнером</h1>
+  				<div class="row">
+  					<div class="col-md-4 offset-md-4">
+  						<div class="wrap-block">
+  							<a href="userPage"><div class="main-button">Перейти до особистого кабінету</div></a>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</main>
+	<script>
+   localStorage.name = "<%=adminName%>";
+  localStorage.log = "<%=adminLog%>";
+  localStorage.phone = "<%=adminPhone%>";
+  localStorage.mail = "<%=adminMail%>";
+  localStorage.pass = "<%=adminPass%>"; 
+  </script>
+  </body>
+</html>

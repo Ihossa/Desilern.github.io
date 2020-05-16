@@ -1,0 +1,699 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700&display=swap');
+.Mont(){
+	font-family: 'Montserrat', sans-serif;
+}
+.Merr(){
+	font-family: 'Merriweather', serif;
+}
+
+
+/*Colors*/
+@bg-block:#eff0f1;
+@title:#505050;
+@text-color:#d1d2d3;
+@active-col: #a4f4ea;
+@no-active:#525252;
+@foot-color:#2c2f32;
+ /*basic setting*/
+ html {
+ 	font-size: 10px;
+ }
+ body{
+ 	.Mont();
+ }
+ /*Typography*/
+ section{
+ 	padding: 18rem 0;
+ }
+.main{
+	padding:3rem 0;
+	background-color: @bg-block;
+	.logo{
+		h1{
+			line-height: 5rem;
+		    text-align: center;
+		    border:1rem solid #a4f4ea;
+		}
+	}
+/*Title*/	
+	.main-inf{
+		padding-top:20rem;
+		h1{
+			font-size: 4.5rem;
+			text-align: center;	
+			color: @title;
+			text-transform: uppercase;
+			span{
+				display: inline-block;
+				background-color: @active-col;
+			}
+		}
+	}
+/*Button*/
+	.wrap-block{
+		padding-top:15rem;
+		text-align: center;
+			.main-button{
+				padding:0.5rem;
+				width: 60%;
+				text-align: center;
+				background-color:@bg-block;
+				border:0.2rem solid @title;
+				font-size: 2rem;
+				text-transform: uppercase;
+				font-weight: 200;
+				color:@title;
+				&:hover{
+					border:none;
+					background-color: @active-col;
+					transition: 02s;	
+				}
+				&::focus{
+					outline: none;
+				}
+			}
+
+	}
+	.main-photo {
+		padding-top:20rem;
+	}
+	@media(max-width: 767px ) {
+		.main-menu{
+			margin-top: 0.5rem;
+			float:right;
+		}
+	}
+}
+.block{
+	margin-top: 2rem;
+	padding:9rem 0;
+}
+.section-header {
+		line-height: 4rem;
+		font-weight: 900;
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;	
+	}
+	.section-span{
+		line-height: 4rem;
+		text-align: center;
+		font-size: 2rem;
+		color: @title;
+		.Merr();
+		margin-bottom: 9rem;
+		
+	}
+.about-us {
+	background-color: #f8fafa;
+
+	.about-us-block{
+		.about-us-img{
+			text-align: center;
+			picture{
+				position: relative;
+				z-index: 2;
+			}
+			.frame{
+				position: relative;
+				margin-top: -46rem;
+				margin-bottom: 6rem;
+				height: 40rem;
+				background-color:@bg-block;
+				z-index: 1;
+			}
+		}
+	}
+	.about-us-text{
+		.about-us-header{
+			font-weight: 500;
+			line-height: 4rem;
+			line-height: 4rem;
+			text-align: center;
+			font-size: 2.5rem;
+			.Merr();
+		}
+		span {
+			font-size: 2rem;
+		}
+	}
+}
+.works{
+	.features-slider{
+		.features-block{
+			outline: none;
+			img {
+				margin: auto;
+				outline: none;
+				
+
+			}
+		}
+	}
+}
+.service{
+	background-color: #f8fafa;
+	.serv{
+		margin-bottom: 2rem;
+		background-color: black;
+		width: 100%;
+		
+		img{
+			opacity: 0.3;
+			position: relative;
+			width: 100%;
+			height:35rem;
+		}
+		.description{
+			position: absolute;
+			top: 15rem;
+			left: 3rem;
+			right: 2rem;
+			width: 80%;
+			color: white;
+			span{
+				font-size: 1.5rem;
+
+			}
+			h4{
+				margin-top: 2rem;
+				margin-left: 1rem;
+				a{
+					color:white;
+				}
+			}
+		}
+
+	}
+}
+.team{
+	.row{
+
+		#teacher1{background: url(../img/teacher1.png) no-repeat;background-size: cover;}
+		#teacher2{background: url(../img/teacher2.png) no-repeat;background-size: cover;}
+		#teacher3{background: url(../img/teacher3.png) no-repeat;background-size: cover;}
+		#teacher4{background: url(../img/teacher4.png) no-repeat;background-size: cover;}
+		#teacher5{background: url(../img/teacher5.png) no-repeat;background-size: cover;}
+		#teacher6{background: url(../img/teacher6.png) no-repeat;background-size: cover;}
+
+		.teacher{
+
+			padding:2rem;
+			margin-bottom:2rem;
+			min-height:42rem;
+			text-align: center;	
+			.teacher-info{
+				background-color:@active-col;
+				margin-top: 23rem;
+				padding:1rem;
+				.teacher-soc{
+					padding:1rem;
+					.soc-link{
+						margin-right: 0.5rem;
+					}
+				}
+				&:hover {
+					display: block;
+
+				}
+			}
+
+			@media(max-width: 767px ) {
+			max-width: 75%;
+			margin-left: auto;
+    		margin-right: auto;
+			}	
+		}
+	}
+}
+.info-learn{
+	background-color: #f8fafa;
+	.photo-teach{
+		
+		.teacher-slider{
+			left: 50%;
+			transform: translate(-50%);
+			width: 37rem;
+
+			.tacher-block{
+				
+				img {
+					margin: auto;
+					outline: none;
+				}
+			}
+		}
+		.back-block{
+			position: absolute;
+			height: 40rem;
+			width: 42rem;
+			background-color:@bg-block;
+			top:2rem;
+			left: 50%;
+			transform: translate(-50%);
+			
+		} 				
+	}
+
+	
+	.inf-teach{
+
+		.teacher-inf-slider{
+			margin-top:2rem;
+			background-color:@bg-block;
+			padding:5rem;
+			.teacher-inf-block{
+				h1{
+					text-align: center;
+				}
+				span{
+					font-size: 1.5rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+}	
+.call-back{
+	.feed-back{
+		padding:2rem;
+		background-color:#495862;
+		margin-bottom: 1rem;
+
+		label{
+			position:relative;
+			font-size: 1.2rem;
+			top:1rem;
+			color: #9ca5ab;
+		}
+		.feed-back-input{
+			width: 100%;
+			margin-bottom: 1rem;
+			font-size: 2rem;
+			text-decoration: italic;
+			display: block;
+			color: #9ca5ab;
+			border:none;
+			border-bottom: 1px solid #9ca5ab;
+			outline: none;
+			background-color:#495862;
+
+		}
+		.feed-back-btn{
+			width: 45%;
+			padding:2rem;
+			margin-top: 1rem;
+			color:#495862;
+			outline: none;
+			font-size: 1.5rem;
+			font-weight: 550;
+			text-transform: uppercase;
+			background-color:@active-col;
+		}
+	}
+	.contacts{
+		padding:2rem;
+		background-color:#495862;
+		height: 43.5rem;		
+		.phones{
+			span{
+				display: block;
+				font-size: 1.1rem;
+				margin-bottom:0.5rem;
+				color:#9ca5ab;
+
+			}
+			margin-bottom: 1rem;
+		}
+		.sites{
+			span{
+				display: block;
+				font-size: 1.1rem;
+				margin-bottom:0.5rem;
+				color:#9ca5ab;
+			}
+			margin-bottom: 2rem;
+		}
+		.location{
+			iframe{
+				width: 100%;
+				height: 25rem;
+			}
+		}
+	}
+}
+footer{
+	background-color:@foot-color;
+	padding:1rem;
+	.section-header{
+		color:white;
+		margin-top:3rem;
+	}
+	.follow{
+		text-align: center;
+		margin:2rem;
+		img{
+			background-color:#424648;
+			margin:0.5rem;
+			padding:3px;
+			&:hover{
+				background-color:@active-col;
+			}
+		}
+	}
+	.section-span{
+
+	}
+}
+////////////modal window/////////////////
+.popup{
+	position:fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	background-color:rgba(0, 0, 0, 0.5);
+	.popup-content{
+		position:fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		top:10%;
+		min-width: 30rem;
+		background-color:#495862;
+		padding:3rem;
+		.popup-close{
+			position:absolute;
+			top:-3rem;
+			right: -3rem;
+			text-align: center;
+			font-size: 4rem;
+			color: @active-col;
+			border:none;
+			outline: none;
+			background-color: transparent;
+
+		}
+		.popup-header{
+			text-align: center;
+			font-size: 2rem;
+			color: #9ca5ab;
+
+		}
+		.input-forms{
+			form{
+				display: inline;
+			}	 
+			label{
+				position:relative;
+				font-size: 1.2rem;
+				top:1rem;
+				color: #9ca5ab;
+			}
+			.input-form{
+				width: 100%;
+				margin-bottom: 1rem;
+				font-size: 2rem;
+				text-decoration: italic;
+				display: block;
+				color: #9ca5ab;
+				border:none;
+				border-bottom: 1px solid #9ca5ab;
+				outline: none;
+				background-color:#495862;
+
+			}
+			.btn{
+				padding:1rem;
+				margin-top: 2rem;
+				margin-left:5rem;
+				color:#495862;
+				outline: none;
+				font-size: 1rem;
+				font-weight: 550;
+				text-transform: uppercase;
+				background-color:@active-col;
+			}
+			.enter-btn, .to-regist{
+				margin-left:1.5rem;
+			}
+
+		}
+	}
+}
+#enter{
+	display: none;
+	.popup-content{
+		top:15%;
+
+	}
+}
+#registration{
+	display: none;
+	.popup-content{
+		top:15%;
+
+	}
+}
+	
+//////////////////////////////////////user page/////////////////////////////////////////////////////////////////////////
+header{
+	padding:1rem 0;
+	background-color: @bg-block;
+	.logo{
+		a{
+			text-decoration: none;
+			color:black;
+			h1{
+			line-height: 4rem;
+		    text-align: center;
+		    border:1rem solid #a4f4ea;
+			}
+		}
+	}
+	.main-menu{
+		float: right;
+		a{
+
+			font-size: 2rem;
+			margin-right: 2rem;
+			padding:1rem;
+			text-align: center;
+			color:black;
+		}
+	}
+}
+.user-info{
+	background-color: #f8fafa;
+	.photo-user{
+		margin-top:5rem;
+		.user-block{
+			text-align: center;
+			z-index: 5;
+			img{
+				position: relative;
+				z-index: 2;
+			}
+		}
+		.back-block{
+			position: absolute;
+			height: 40rem;
+			width: 42rem;
+			background-color:@bg-block;
+			top:2rem;
+			left: 50%;
+			transform: translate(-50%);
+			z-index: 1;
+		}
+		#userName{
+			margin: 1rem;
+			text-align: center;
+			font-style: italic;
+			font-size: 3rem;
+		}
+	}
+	.user-date{
+		margin-top:7rem;
+		background-color:@bg-block;
+		padding:3rem;
+		padding-bottom:4rem;
+		padding-top:2rem;
+
+		label{
+			position:relative;
+			font-size: 1.2rem;
+			top:3rem;
+			color: #9ca5ab;
+		}
+		.user-data-input{
+			width: 80%;
+			margin-bottom: 1rem;
+			margin-left: 8rem;
+			font-size: 2rem;
+			text-decoration: italic;
+			display: block;
+			color: #9ca5ab;
+			border:none;
+			border-bottom: 1px solid #9ca5ab;
+			outline: none;
+			background-color:@bg-block;
+
+		}
+
+	}
+	.user-history{
+		height: 20rem;
+		margin-top: 3rem;
+		background-color:@bg-block;
+		margin-bottom:5rem;
+		h1{
+			text-align: center;
+		}
+		.tabs{
+			padding:1rem;
+			.tab-btn{
+
+				display:inline-block;
+
+				button{
+					width: 10rem;
+					height: 4rem;
+				}
+			}
+			.tab-content{
+				margin-top: 1rem;
+				background-color: white;
+				div{
+					display:none;
+				}
+			}
+		}
+	}
+
+
+}
+.user-footer{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	.foot-title{
+		padding-top:2rem;
+		text-align: center;
+		color: white;
+		font-size: 2rem;
+	}
+}
+
+///////////////////////////////////courses page/////////////////////////////////
+.course-info{
+	padding:2rem;
+	.type{
+		margin-bottom: 0;
+	}
+	.data{
+		margin-bottom: 2rem;
+	}
+	.img-block{
+		transition-duration: 5s;
+		height: 100%;
+		background:url(../img/UXpro.png) no-repeat 0% 0%;
+		background-size: cover;
+		padding-top:5rem;
+		.description{
+			display: none;
+			h1{
+				.Merr();
+				text-align: center;
+				font-size: 3rem;
+				margin: 1rem;
+			}
+			p{
+				.Merr();
+				font-style:italic;
+				font-size: 1.5rem;
+			}
+		}
+		&:hover{
+			background:none;
+			transition-duration: 2s;
+			.description{
+				display: block;
+				transition-duration: 2s;
+
+			}
+		}
+	}
+	
+
+	.wrap-vac{
+		padding:4rem;
+		.vacancines{
+			border:2px solid @no-active;
+			border-radius: 1rem;
+			padding:1.5rem;
+			text-align: center;
+			h2{
+				.Merr();
+				text-align: center;
+				font-size: 2.5rem;
+
+			}
+			.vavancines-num{
+				.Merr();
+				display: block;
+				text-align: center;
+				font-size: 7rem;
+				margin: 1rem;
+			}
+			button{
+
+				background-color: @bg-block;
+				font-size: 1.5rem;
+				padding:1rem;
+			}
+		}
+	}
+	.containe{
+		border:2px solid @no-active;
+		border-radius: 1rem;
+		padding:1.5rem;
+		text-align: center;
+		min-height: 18rem;
+		h1{
+			.Merr();
+			text-align: center;
+			font-size: 2.5rem;
+		}
+		span{
+			.Merr();
+			display: block;
+			text-align: center;
+			font-size: 5rem;
+			margin: 1rem;
+		}
+		#titleSchool{
+			font-size: 2.5rem;
+		}
+		#teacherName{
+			font-size: 2rem;
+		}
+		.photo-cont{
+			width:5rem;
+			height: auto;
+			margin:auto;
+			
+			
+			img{
+
+				width: 100%;
+				height: auto;
+				border-radius: 10rem;
+
+			}
+		}
+	}
+
+}
