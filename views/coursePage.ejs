@@ -40,7 +40,7 @@
   						<div class="vacancines">
   							<h2>Залишилось місць</h2>
   							<span class="vavancines-num"><%=vacancines%></span>
-  							<button type="submit">Забронювати</button>
+  							<button id = "reserved" type="submit">Забронювати</button>
   						</div>
   					</div>
   				</div>
@@ -74,10 +74,23 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-
+	let id = "<%=idCourse%>";
+	let title = '<%=title%>';
+	$('#userId')[0].value = localStorage.id;
 	document.querySelector("#headUser").textContent = localStorage.log;
-	console.log('<%=title%>');
+	document.querySelector("#reserved").addEventListener("click", function(e){
+		let xhr = new XMLHttpRequest();
+		xhr.open("GET", `/Course?` + "course=" + id + "&&user=" + localStorage.id);
+		xhr.send();
+
+		//regArr.push(`${id},${localStorage.id}`);
+		//console.log(regArr);	
+		location.reload();
+	})
+
+
 </script>
 </body>
 </html>

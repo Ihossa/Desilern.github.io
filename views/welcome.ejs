@@ -26,7 +26,9 @@
   				<div class="row">
   					<div class="col-md-4 offset-md-4">
   						<div class="wrap-block">
-  							<a href="userPage"><div class="main-button">Перейти до особистого кабінету</div></a>
+  							<form id="main-button" method="POST" action="/userPage">
+                  <input id="userId" name="user_id" value= "<%=idAdmin%>" readonly hidden>
+                  <button class="main-button">Перейти до особистого кабінету</button></form>
   						</div>
   					</div>
   				</div>
@@ -34,11 +36,18 @@
   		</div>
   	</main>
 	<script>
-   localStorage.name = "<%=adminName%>";
+  localStorage.id = "<%=idAdmin%>";
+  localStorage.name = "<%=adminName%>";
   localStorage.log = "<%=adminLog%>";
   localStorage.phone = "<%=adminPhone%>";
   localStorage.mail = "<%=adminMail%>";
-  localStorage.pass = "<%=adminPass%>"; 
+  localStorage.pass = "<%=adminPass%>";
+
+
+
+  document.querySelector("#main-button").addEventListener("click", function(e){
+
+})
   </script>
   </body>
 </html>

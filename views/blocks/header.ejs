@@ -8,9 +8,18 @@
   					</div>
   					<div class="col-lg-5 offset-lg-4 col-md-2 offset-md-7 col-sm-2 offset-sm-6">
   						<div class="main-menu">
-  							<a href="/Course">Курси</a>
-  							<a href="">Допомога</a>
-                <a href="/userPage" id="headUser"></a>  
+                <div id="course">
+  							 <a id="headCourse" href="/#course">Курси</a>
+                  <div class="subnav-content">
+                    <a href="uxDesign">UX Design</a>
+                    <a href="uiDesign">UI Design</a>
+                    <a href="basicDesign">Design basic</a>
+                  </div>
+                </div>
+  							<a href="/#call-back">Допомога</a>
+                <form id="main-button" method="POST" action="/userPage">
+                  <input id="userId" name="user_id" readonly >
+                  <button id="headUser"></button></form> 
   							<img src="public/img/user.png" alt="User">
   						</div>
   					</div>

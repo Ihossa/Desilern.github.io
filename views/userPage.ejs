@@ -39,25 +39,11 @@
   					</div>
   					<div class="user-history">
   						<h1>Історія бронювань</h1>
-  						<div class="tabs">
-  							<div class="tab-btn">
-  								<button type="submit" name="school">Школа</button>	
-  								<button type="submit" name="user">Користувачі</button>
-  								<button type="submit" name="history">Історія</button>
-  								<button type="submit" name="course">Курси</button>
-  								<button type="submit" name="teacher">Вчителі</button>
-  								<button type="submit" name="admin">Адміністратори</button>
-  							</div>
-  							<div class="tab-content">
-  								<div id="school-content">text 1 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  								<div id="user-content">text 2 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  								<div id="history-content">text 3 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  								<div id="course-content">text 4 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  								<div id="teacher-content">text 5 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  								<div id="admin-content">text 6 safsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfds</div>
-  							</div>
-  						</div>
-  					</div>
+              <div class="display">
+                  <% data.forEach(function(dat) { %>
+                    <div class="history-block"><p class="courseTitle"><%= dat.title%></p><p class="courseStatus"><%= dat.status%></p></div>
+                  <% }); %>
+              </div>
   				</div>
 			</div>
 		</div>
@@ -68,32 +54,15 @@
 	<script>
 		"use strick"
 
-
-
 $('#userName')[0].textContent = localStorage.name;
 $('#log')[0].value = localStorage.log;
 $('#phone')[0].value = localStorage.phone;
 $('#mail')[0].value = localStorage.mail;
 $('#pass')[0].value = localStorage.pass;
 $("#headUser")[0].textContent = localStorage.log;
+$('#userId')[0].value = localStorage.id;
 
 
-
-		$(".tab-btn").on("click", "button", function(el){
-			let name = el.target.name;
-
-			$(".tab-content>div").css({display: "none"});
-
-			switch(name){
-				case "school": $("#school-content").css({display: "block"}); break;
-				case "user": $("#user-content").css({display: "block"}); break;
-				case "history": $("#history-content").css({display: "block"}); break;
-				case "course": $("#course-content").css({display: "block"}); break;
-				case "teacher": $("#teacher-content").css({display: "block"}); break;
-				case "admin": $("#admin-content").css({display: "block"}); break;
-			}
-
-		})
 	</script>
 </body>
 </html>

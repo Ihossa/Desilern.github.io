@@ -127,12 +127,13 @@
   	</div>
 
   	<div class="service block">
+      <a name="course"></a>
   		<div class="container">
   			<h1 class="section-header">
-  				Наш сервіс
+  				Курси
   			</h1>
   			<h3 class="section-span">
-  				Що ми можемо вам надати
+  				Про що ви можете дізнатись на наших курсах
   			</h3>
   			<div class="row">
 
@@ -395,20 +396,27 @@
 		</div>
 	</div>
 	<div class="call-back block">
+    <a name="call-back">
 		<div class="container">
+      <div class="section-header">
+        Виникли запитання?
+      </div>
+      <div class="section-span">
+        Звеніться до нас)
+      </div>
 			<div class="row">
 				<div class="col-lg-7">
-					<div class="feed-back">
+					<form method="POST" action="/feedBack" class="feed-back">
 						<label for="#">Ваше ім'я</label>
-						<input class="feed-back-input" type="text">
+						<input class="feed-back-input" name="name" type="text">
 						<label for="#">Тема</label>
-						<input class="feed-back-input" type="text">
+						<input class="feed-back-input" name="subject" type="text">
 						<label for="#">Пошта</label>
-						<input class="feed-back-input" type="email">
+						<input class="feed-back-input" name="mail" type="email">
 						<label for="#">Повідомлення</label>
-						<textarea class="feed-back-input" rows="3"></textarea>	
+						<textarea class="feed-back-input" name="message" rows="3"></textarea>	
 						<button class="feed-back-btn btn" type="submit">Відправити</button>											
-					</div>
+					</form>
 				</div>
 				<div class="col-lg-5">
 					<div class="contacts">
@@ -478,19 +486,19 @@
 				<div class="registration input-forms">
           <form id = "formReg" method="post" action="/regist">
 						<label for="#">Ваше ім'я</label>
-						<input class="input-form" type="text" name='name'>
+						<input class="input-form" type="text" name='name'required>
             <div class="error"></div>
 						<label for="#">Логін</label>
-						<input class="input-form" type="text" name='login'>
+						<input class="input-form" type="text" name='login'required>
             <div class="error"></div>
 						<label for="#">Номер телефону</label>
-						<input class="input-form" type="text" name='phone'>	
+						<input class="input-form" type="text" name='phone'required>	
             <div class="error"></div>					
 						<label for="#">Почта</label>
-						<input class="input-form" type="email"name='mail'>
+						<input class="input-form" type="email"name='mail'required>
             <div class="error"></div>
 						<label for="#">Пароль</label>
-						<input class="input-form" type="text" name='password'>
+						<input class="input-form" type="text" name='password'required>
             <div class="error"></div>	
           </form>
           <button class="registration-btn btn" type="submit">Зареєструватись</button>
@@ -518,7 +526,13 @@
     const $regBtn = document.querySelector('.registration-btn');
     const $enterBtn = document.querySelector('.enter-btn');
 		$logo.addEventListener("click", function(){
-			$enter.style.display = "block";
+      let isUser = localStorage.id?true:false;
+      if(isUser){
+        document.location.href = `/userPage?user_id=${localStorage.id}`;
+      }else{
+        $enter.style.display = "block";
+      }
+			
 		})
     $toReg.addEventListener("click", function(){
       //$enter.style.display = "none";

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <title>Desilearn</title>
+    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header> 
+    <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 ">
+              <div class="logo">
+                <a href="/"><h1>Desilearn</h1></a>
+              </div>  
+            </div>
+            <div class="col-lg-5 offset-lg-4 col-md-2 offset-md-7 col-sm-2 offset-sm-6">
+              <h1>Сторінка адміністратора</h1>
+            </div>
+          </div>
+      </div>
+</header>
+	<div class="admin-page">
+		<div class="container">
+			<div class="row">
+        <div class="col-lg-4">
+  			  <div class="admin-panel">
+  			  	<h1>Історія бронювань</h1>
+  			  	<div class="tabs">
+  			  		<div class="tab-btn">
+  			  			<form method="POST" action="/schoolInf"><button type="submit" name="school">Школа</button><br></form>
+  			  			<form method="POST" action="/usersInf"><button type="submit" name="user">Користувачі</button><br></form>
+  			  			<form method="POST" action="/historyInf"><button type="submit" name="history">Історія</button><br></form>
+  			  			<form method="POST" action="/coursesInf"><button type="submit" name="course">Курси</button><br></form>
+  			  			<form method="POST" action="/teachersInf"><button type="submit" name="teacher">Вчителі</button><br></form>
+  			  			<form method="POST" action="/adminInf"><button type="submit" name="admin">Адміністратори</button><br></form>
+  			  		</div>
+  			  	</div>
+  			  </div>
+  			</div>
+        <div class="col-lg-8">
+          <div class="tab-content">
+
+
+           <div id="school-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_school%></p>
+                      <p><%= dat.title_school%></p>
+                      <p><%= dat.adres%></p>
+                      <p><%= dat.login%></p>
+                    </div>
+                <% }); %>
+              </div>
+              <form method="POST" action="/searchSchool">
+                <label>Знайти школи в яких адмін</label>
+                <select name="select">
+                 <%let arr2 = []; history.forEach(function(dat) {  arr2.push(dat.login)});
+                 Array.from(new Set(arr2)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Знайти</button>
+              </form>
+              <form method="POST" action="addSchool">
+                <label>Добавити школу у якої:</label>
+                <label>назва школи</label>
+                <input type="text" name="nameSchool" required>
+                <label>адреса школи</label>
+                <input type="text" name="adresSchool" required>
+                <label>адміністратор</label>
+                <select name="select">
+                 <%let arr3 = []; history.forEach(function(dat) {  arr3.push(dat.login)});
+                 Array.from(new Set(arr3)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Добавити</button>                               
+              </form>
+              <form method="POST" action="/delSchool">
+                <label>Видалити школу по назві</label>
+                <select name="select">
+                 <%let arr4 = []; history.forEach(function(dat) {  arr4.push(dat.title_school)});
+                 Array.from(new Set(arr4)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Видалити</button> 
+              </form>
+              <form method="POST" action="/schoolInf">
+                <button>Показати все</button>
+              </form>
+            </div>
+
+
+
+
+            <div id="user-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_user%></p>
+                      <p><%= dat.login%></p>
+                      <p><%= dat.pasword%></p>
+                      <p><%= dat.user_name%></p>
+                      <p><%= dat.mail%></p>
+                      <p><%= dat.phone%></p>
+                      <p><%= dat.photo%></p>
+                    </div>
+                <% }); %>
+              </div>
+              <form method="POST" action="/searchUser">
+                <label>Знайти користувачів по логіну</label>
+                <input type="text" name="userLog">
+                <button>знайти</button>
+              </form>
+              <form method = "POST" action="/delUser">
+                <label method = "POST" action>Видалити користувача по логіну</label>
+                <input type="text" name="userLog">
+                <button>Видалити</button>
+              </form>
+            </div>
+
+
+
+
+            <div id="history-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_history%></p>
+                      <p><%= dat.login%></p>
+                      <p><%= dat.title%></p>
+                      <p><%= dat.status%></p>
+                    </div>
+                <% }); %>
+              </div>
+              <form id = "historySt" method="POST" action="/serchHist">
+                <label>Пошук по лоніну</label>
+                <input type="text" name="search">
+                <button>знайти</button>
+              </form>
+              <form method="POST" action="/changeStatus">
+                <label>Змінити статус лоніну та назвами курсів</label>
+                <select name="select">
+                 <%let arr = []; history.forEach(function(dat) {  arr.push(dat.login)});
+                 Array.from(new Set(arr)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <select name="select">
+                 <%let arr1 = []; history.forEach(function(dat) {  arr1.push(dat.title)});
+                 Array.from(new Set(arr1)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button >змінити</button>
+              </form>
+              <div class="showStatus">
+                <label>Показати всіх із статусом</label>
+                <form id="payOn" method="POST" action="/payOn"><button>Оплачено</button></form>
+                <form method="POST" action="/payOf"><button>Не оплачено</button></form>
+              </div>
+              <form method="POST" action="/historyInf"><button>Показати все</button></form>
+            </div>
+
+
+            <div id="course-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_course%></p>
+                      <p><%= dat.title%></p>
+                      <p><%= dat.type%></p>
+                      <p><%= dat.lesson_num%></p>
+                      <p><%= dat.title_school%></p>
+                      <p><%= dat.teacher_name%></p>
+                      <p><%= dat.vacancines%></p>
+                      <p><%= dat.start_date%></p>
+                      <p><%= dat.finish_date%></p>
+                      <p><%= dat.price%></p>
+                      <p><%= dat.description%></p>
+                    </div>
+                <% }); %>
+              </div>
+              <form method="POST" action="/searchCourse">
+                <label>Пошук курсу по назві</label>
+                <input type="text" name="title">
+                <button>Знайти</button>
+              </form>
+              <form method="POST" action="/searchCourseTeach">
+                <label>Пошук курсів що викладає</label>
+                <select name="select">
+                 <%let arr5 = []; history.forEach(function(dat) {  arr5.push(dat.teacher_name)});
+                 Array.from(new Set(arr5)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Знайти</button>
+              </form>
+              <form method="POST" action="/addCourse">
+                <label>Добавити курс де:</label>
+                <label>назва курсу</label>
+                <input type="text" name="title" required>
+                <label>тип</label>
+                <select name="select">
+                    <option value="online">online</option>
+                    <option value="ofline">ofline</option>
+                </select>            
+                <label>вчитель</label>
+                <select name="select">
+                 <%let arr6 = []; history.forEach(function(dat) {  arr6.push(dat.teacher_name)});
+                 Array.from(new Set(arr6)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <label>Школа</label>
+                <select name="select">
+                 <%let arr7 = []; history.forEach(function(dat) {  arr7.push(dat.title_school)});
+                 Array.from(new Set(arr7)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <label>Кількість вакансій</label>
+                <input type="number" name="vacancines" required>
+                <label>Ціна</label>
+                <input type="number" name="price" required>   
+                <label>Початок курсу</label>
+                <input type="date" name="start_date" required>
+                <label>Кінець курсу</label>
+                <input type="date" name="finish_date" required>
+                <label>Кількість занять</label>
+                <input type="number" name="lesson_num" required>
+                <label>Опис</label>
+                <textarea name="description" rows="3"></textarea> <button>Додати</button>                                        
+              </form>
+              <form method="POST" action="/delCourse">
+                <label>Видалити курси по їх назві</label>
+                <select name="select">
+                 <%let arr8 = []; history.forEach(function(dat) {  arr8.push(dat.title)});
+                 Array.from(new Set(arr8)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Видалити</button>
+              </form>
+            </div>
+
+
+
+
+            <div id="teacher-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_teacher%></p>
+                      <p><%= dat.teacher_name%></p>
+                      <p><%= dat.mail%></p>
+                      <p><%= dat.phone%></p>
+                      <p><%= dat.specialty%></p>
+                      <p><%= dat.description%></p>
+                    </div>
+                <% }); %>
+              </div>
+              <form method="POST" action="/searchTeacher">
+                <label>Знайти вчителя по імені</label>
+                <select name="select">
+                 <%let arr10 = []; history.forEach(function(dat) {  arr10.push(dat.teacher_name)});
+                 Array.from(new Set(arr10)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Знайти</button>
+              </form>
+              <form method="POST" action="/addTeacher">
+                <label>Добавити вчителя:</label>
+                <label>Повне ім'я</label>
+                <input type="text" name="teacher_name" required>
+                <label>Ел. пошта</label>
+                <input type="email" name="mail" required>
+                <label>Телефон</label>
+                <input type="tel" name="phone" required>
+                <label>Спеціальність</label>
+                <input type="text" name="specialty" required>
+                <label>Опис</label>
+                <textarea name="description" raw = "3"></textarea>
+                <button>Добавити</button>
+              </form>
+              <form method="POST" action="/delTeacher">
+                <label>Видалити інформацію про вчителя за іменем</label>
+                <select name="select">
+                 <%let arr9 = []; history.forEach(function(dat) {  arr9.push(dat.teacher_name)});
+                 Array.from(new Set(arr9)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Видалити</button>
+              </form>
+            </div>
+
+
+
+
+
+
+            <div id="admin-content" class="content">
+              <div class="panel">
+                <% history.forEach(function(dat) { %>
+                    <div class="panel-block">
+                      <p><%= dat.id_admin%></p>
+                      <p><%= dat.login%></p>
+                      <p><%= dat.pasword%></p>
+                      <p><%= dat.admin_name%></p>
+                      <p><%= dat.mail%></p>
+                      <p><%= dat.phone%></p>
+                    </div>
+                <% }); %>
+                </div> 
+              <form method="POST" action="/addAdmin">
+               <label>Додати адміністратора</label>
+               <label>Логін</label> 
+               <input type="text" name="login" required>
+               <label>Пароль</label> 
+               <input type="text" name="pasword" required>
+               <label>Ім'я</label> 
+               <input type="text" name="admin_name" required>
+               <label>Ел. пошта</label> 
+               <input type="email" name="mail" required>
+               <label>Телефон</label> 
+               <input type="tel" name="phone" required>
+               <button>Додати</button>
+              </form>
+              <form method="POST" action="/delAdmin">
+                <label>Видалити Адміністратора</label>
+                <select name="select">
+                 <%let arr11 = []; history.forEach(function(dat) {  arr11.push(dat.login)});
+                 Array.from(new Set(arr11)).forEach(function(e) { %>
+                    <option value="<%= e%>"><%=e%></option>
+                  <% }); %>
+                </select>
+                <button>Видалити</button>
+              </form> 
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		"use strick"
+
+    switch(localStorage.tab){
+        case '1': $("#school-content").css({display: "block"});break;
+        case '2': $("#user-content").css({display: "block"}); break;
+        case '3': $("#history-content").css({display: "block"}); break;
+        case '4': $("#course-content").css({display: "block"}); break;
+        case '5': $("#teacher-content").css({display: "block"}); break;
+        case '6': $("#admin-content").css({display: "block"}); break; 
+    }
+
+		$(".tab-btn").on("click", "button", function(el){
+			let name = el.target.name;
+
+			$(".tab-content>div").css({display: "none"});
+
+
+
+			switch(name){
+				case "school": localStorage.tab = 1; $("#school-content").css({display: "block"});break;
+				case "user": localStorage.tab = 2; $("#user-content").css({display: "block"}); break;
+				case "history": localStorage.tab = 3; $("#history-content").css({display: "block"}); break;
+				case "course": localStorage.tab = 4; $("#course-content").css({display: "block"}); break;
+				case "teacher": localStorage.tab = 5; $("#teacher-content").css({display: "block"}); break;
+				case "admin": localStorage.tab = 6; $("#admin-content").css({display: "block"}); break;
+			}
+
+		});
+
+    
+	</script>
+</body>
+</html>
